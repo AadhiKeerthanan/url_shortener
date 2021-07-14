@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+/*  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #221E22;
+}
+
+div {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #06BA63;
+    font-weight: 700;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+input {
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #221E22;
+    transition: border 1.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    font-weight: 700;
+}
+
+input:focus {
+    outline: none;
+    width: 150%;
+    border: 3px solid #06BA63;
+}
+
+
+button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 3px;
+    border: none;
+    color: #06BA63;
+    cursor: pointer;
+    transition: background-color 0.4s ease-out;
+}
+
+button:hover {
+    background-color: #06BA63;
+    color: white;
+}
+
+button:focus {
+    background-color: #06BA63;
+    color: white;
+    outline: none;
+}
+
+@media only screen and (max-width: 760px) {
+    div {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title {
+        color: #06BA63;
+        font-weight: 700;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+    }
+
+    input {
+        width: 75%;
+        border-radius: 2px;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        font-family: inherit;
+        color: #221E22;
+        transition: border 1.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+        font-weight: 700;
+    }
+
+    input:focus {
+        outline: none;
+        width: 100%;
+        border: 3px solid #06BA63;
+    }
+
+    button {
+        display: block;
+        margin-top: 1rem;
+        padding: 0.75rem;
+        font-size: 1rem;
+        font-family: inherit;
+        font-weight: 700;
+        border-radius: 3px;
+        border: none;
+        color: #06BA63;
+        cursor: pointer;
+        transition: background-color 0.4s ease-out;
+    }
+}
