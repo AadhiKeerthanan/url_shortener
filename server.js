@@ -9,6 +9,7 @@ const { nanoid } = require('nanoid');
 const Url = require('./models/url');
 const ejs = require('ejs')
 const createHttpError = require('http-errors')
+const urlmodule = require('url')
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,25 +26,30 @@ app.set('view engine', 'ejs')
 const dbUrl = process.env.DB_URL;
 mongoose.connect(dbUrl, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
 
+// const currenturl = new URL('http://localhost:4000').host
+
+
 // routes
 app.get('/', (req, res) => {
+    console.log(req.headers.host)
     return res.render('index')
 })
 
 app.post('/', async (req, res) => {
     try {
         const { url } = req.body;
+        console.log(url)
         // check if the url exists in the database
         const exist = await Url.findOne({ url })
         if (exist) {
-            return res.render('index', { shorturl: `http://localhost:${port}/${exist.shorturl}` })
+            return res.render('index', { shorturl: `http://${req.headers.host}/${exist.shorturl}` })
         }
         const short = new Url({
             url: url,
             shorturl: nanoid(5)
         })
         const savetoDb = await short.save()
-        return res.render('index', { shorturl: `http://localhost:${port}/${savetoDb.shorturl}` })
+        return res.render('index', { shorturl: `http://${req.headers.host}/${savetoDb.shorturl}` })
     } catch (error) {
         res.json({
             error
