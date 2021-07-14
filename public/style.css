@@ -79,6 +79,18 @@ button:focus {
     outline: none;
 }
 
+a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #FF616D;
+}
+
+p {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
 @media only screen and (max-width: 760px) {
     div {
         margin-top: 10rem;
@@ -126,5 +138,17 @@ button:focus {
         color: #06BA63;
         cursor: pointer;
         transition: background-color 0.4s ease-out;
+    }
+
+    a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: #FF616D;
+    }
+    
+    p {
+        color: white;
+        font-size: 0.9rem;
+        margin-top: 1rem;
     }
 }

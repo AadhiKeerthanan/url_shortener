@@ -10,11 +10,13 @@
 <body>
     <div>
         <h1 class="title">Url Shortener</h1>
-        <form>
-            <input type="url" name="url" placeholder="Place your url here...">
+        <form action="/" method="POST">
+            <input type="url" name="url" placeholder="Place url here..." required>
             <button class="shorten-url">Shorten url</button>
         </form>
-        <p></p>
+            <% if (locals.shorturl) { %>
+                <p>Short Url: <a target="_blank" href="<%= shorturl %>"><%= shorturl %> </a></p>
+            <% } %> 
     </div>
 </body>
 </html>
