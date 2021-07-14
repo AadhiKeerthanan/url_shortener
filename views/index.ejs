@@ -15,7 +15,7 @@
             <button class="shorten-url">Shorten url</button>
         </form>
             <% if (locals.shorturl) { %>
-                <p>Short Url: <a target="_blank" href="<%= shorturl %>"><%= shorturl %> </a></p>
+                <a target="_blank" href="<%= shorturl %>"><%= shorturl %> </a>
             <% } %> 
     </div>
 </body>

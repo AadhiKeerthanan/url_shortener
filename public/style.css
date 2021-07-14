@@ -80,15 +80,11 @@ button:focus {
 }
 
 a {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     text-decoration: none;
     color: #FF616D;
-}
-
-p {
-    color: white;
-    font-size: 1.2rem;
     margin-top: 1rem;
+    text-align: center;
 }
 
 @media only screen and (max-width: 760px) {
@@ -144,11 +140,7 @@ p {
         font-size: 0.9rem;
         text-decoration: none;
         color: #FF616D;
-    }
-    
-    p {
-        color: white;
-        font-size: 0.9rem;
         margin-top: 1rem;
+        font-size: 1.1rem;
     }
 }
